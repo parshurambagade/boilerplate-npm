@@ -22,7 +22,7 @@ if (!process.env.DISABLE_XORIGIN) {
   });
 }
 
-app.use('/public', express.static(process.cwd() + '/public'));
+app.use('/views', express.static(process.cwd() + '/views'));
 
 app.route('/_api/package.json')
   .get(function(req, res, next) {
